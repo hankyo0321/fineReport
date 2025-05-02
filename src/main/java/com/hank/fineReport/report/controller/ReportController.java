@@ -207,6 +207,7 @@ public class ReportController {
      * 【預警-未驗貨】太平廠
      * @return
      */
+    @GetMapping("/sendNoCheckTotalMailTP")
     public BaseResult<Void> sendNoCheckTotalMailTP(){
         try{
             mailService.sendNoCheckTotalMailTP();
