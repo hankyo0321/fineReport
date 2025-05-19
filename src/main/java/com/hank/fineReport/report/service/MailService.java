@@ -938,7 +938,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" + "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td><a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25AE%25A2%25E5%258D%2595%25E8%25B7%259D%25E7%25A6%25BB%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25A1%25E5%258D%2595_AL.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaAL.getProNum()).append("</a></td>");
+        htmlContent.append("<td><a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%2598%258E%25E7%25B4%25B0%2528AL%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaAL.getProNum()).append("</a></td>");
         htmlContent.append("<td rowspan='2'>").append("未滿單PO數\n" + "<br>"+
                 "số lượng đơn chưa đủ đơn").append("</td>");
         htmlContent.append("</tr>");
@@ -953,7 +953,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" + "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td><a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE_AL.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaPastAL.getProNum()).append("</a></td>");
+        htmlContent.append("<td><a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%2598%258E%25E7%25B4%25B0%2528AL%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaPastAL.getProNum()).append("</a></td>");
         htmlContent.append("</tr>");
 
         //訂單距離客人交期10天未滿單成型未開補
@@ -966,7 +966,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" + "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td><a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F10%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%259C%25AA%25E9%2596%258B%25E8%25A3%259C_AL.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaTenAL.getProNum()).append("</a></td>");
+        htmlContent.append("<td><a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F10%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%259C%25AA%25E9%2596%258B%25E8%25A3%259C%25E6%2598%258E%25E7%25B4%25B0%2528AL%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaTenAL.getProNum()).append("</a></td>");
         htmlContent.append("<td>").append("未開補工單數-大單\n" + "<br>"+
                 "số đơn chưa khai bù - đơn to").append("</td>");
         htmlContent.append("</tr>");
@@ -979,6 +979,7 @@ public class MailService {
         String [] mailary = {"jay.xiao@stella.com.hk","hank.lin@stella.com.hk" ,"demi.sun@stella.com.hk",
         "joky.bai@stella.com.hk","soso.yang@stella.com.hk"};
 //,"demi.sun@stella.com.hk",
+//        String [] mailary={"jay.xiao@stella.com.hk","hank.lin@stella.com.hk"};
 //        "joky.bai@stella.com.hk","soso.yang@stella.com.hk"
         helper.setTo(mailary);
 //        helper.setTo("hank.lin@stella.com.hk");
@@ -1024,7 +1025,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" + "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25AE%25A2%25E5%258D%2595%25E8%25B7%259D%25E7%25A6%25BB%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25A1%25E5%258D%2595_GN.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaGN.getProNum()).append("</a></td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%2598%258E%25E7%25B4%25B0%2528GN%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaGN.getProNum()).append("</a></td>");
         htmlContent.append("<td rowspan='2'>").append("未滿單PO數\n" +  "<br>"+
                 "số lượng đơn chưa đủ đơn").append("</td>");
         htmlContent.append("</tr>");
@@ -1039,7 +1040,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" +  "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE_GN.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaPastGN.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%2598%258E%25E7%25B4%25B0%2528GN%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaPastGN.getProNum()).append("</a> </td>");
         htmlContent.append("</tr>");
 
         //訂單距離客人交期10天未滿單成型未開補
@@ -1052,7 +1053,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" + "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F10%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%259C%25AA%25E9%2596%258B%25E8%25A3%259C_GN.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaTenGN.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F10%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%259C%25AA%25E9%2596%258B%25E8%25A3%259C%25E6%2598%258E%25E7%25B4%25B0%2528GN%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaTenGN.getProNum()).append("</a> </td>");
         htmlContent.append("<td>").append("未開補工單數-大單\n" +  "<br>"+
                 "số đơn chưa khai bù - đơn to").append("</td>");
         htmlContent.append("</tr>");
@@ -1111,7 +1112,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" +  "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25AE%25A2%25E5%258D%2595%25E8%25B7%259D%25E7%25A6%25BB%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25A1%25E5%258D%2595_TP.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'> ").append(financeaTP.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%2598%258E%25E7%25B4%25B0%2528TP%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'> ").append(financeaTP.getProNum()).append("</a> </td>");
         htmlContent.append("<td rowspan='2'>").append("未滿單PO數\n" +  "<br>"+
                 "số lượng đơn chưa đủ đơn").append("</td>");
         htmlContent.append("</tr>");
@@ -1126,7 +1127,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" +  "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE_TP.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaPastTP.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%2598%258E%25E7%25B4%25B0%2528TP%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaPastTP.getProNum()).append("</a> </td>");
         htmlContent.append("</tr>");
 
         //訂單距離客人交期10天未滿單成型未開補
@@ -1139,7 +1140,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("生管\n" +  "<br>"+
                 "Sinh Quản").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F10%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%259C%25AA%25E9%2596%258B%25E8%25A3%259C_TP.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaTenTP.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F10%25E5%25A4%25A9%25E6%259C%25AA%25E6%25BB%25BF%25E5%2596%25AE%25E6%259C%25AA%25E9%2596%258B%25E8%25A3%259C%25E6%2598%258E%25E7%25B4%25B0%2528TP%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaTenTP.getProNum()).append("</a> </td>");
         htmlContent.append("<td>").append("未開補工單數-大單\n" +  "<br>"+
                 "số đơn chưa khai bù - đơn to").append("</td>");
         htmlContent.append("</tr>");
@@ -1199,7 +1200,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("品管\n" +  "<br>"+
                 "Phòng kiểm tra chất lượng").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8_VN.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaNoCheckAL.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8%25E6%2598%258E%25E7%25B4%25B0%2528AL%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaNoCheckAL.getProNum()).append("</a> </td>");
         htmlContent.append("<td rowspan='2'>").append("未驗貨PO數\n" +  "<br>"+
                 "Số lượng đơn chưa kiểm hàng").append("</td>");
         htmlContent.append("</tr>");
@@ -1214,7 +1215,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("品管\n" +  "<br>"+
                 "Phòng kiểm tra chất lượng").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8_VN.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaNoCheckPastAL.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8%25E6%2598%258E%25E7%25B4%25B0%2528AL%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaNoCheckPastAL.getProNum()).append("</a> </td>");
         htmlContent.append("</tr>");
 
         htmlContent.append("</table>");
@@ -1272,7 +1273,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("品管\n" +  "<br>"+
                 "Phòng kiểm tra chất lượng").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8_GN.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaNoCheckGN.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8%25E6%2598%258E%25E7%25B4%25B0%2528GN%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaNoCheckGN.getProNum()).append("</a> </td>");
         htmlContent.append("<td rowspan='2'>").append("未驗貨PO數\n" +  "<br>"+
                 "Số lượng đơn chưa kiểm hàng").append("</td>");
         htmlContent.append("</tr>");
@@ -1287,7 +1288,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("品管\n" +  "<br>"+
                 "Phòng kiểm tra chất lượng").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8_GN.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaNoCheckPastGN.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8%25E6%2598%258E%25E7%25B4%25B0%2528GN%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaNoCheckPastGN.getProNum()).append("</a> </td>");
         htmlContent.append("</tr>");
 
         htmlContent.append("</table>");
@@ -1345,7 +1346,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("品管\n" +  "<br>"+
                 "Phòng kiểm tra chất lượng").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8_TP.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaNoCheckTP.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E8%25B7%259D%25E9%259B%25A2%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F7%25E5%25A4%25A9%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8%25E6%2598%258E%25E7%25B4%25B0%2528TP%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaNoCheckTP.getProNum()).append("</a> </td>");
         htmlContent.append("<td rowspan='2'>").append("未驗貨PO數\n" +  "<br>"+
                 "Số lượng đơn chưa kiểm hàng").append("</td>");
         htmlContent.append("</tr>");
@@ -1360,7 +1361,7 @@ public class MailService {
                 "Từ thứ 2 đến thứ 7").append("</td>");
         htmlContent.append("<td>").append("品管\n" +  "<br>"+
                 "Phòng kiểm tra chất lượng").append("</td>");
-        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8_TP.cpt&ref_t=design&op=write&ref_c=20807079-0b44-43c7-a0f9-9abcddb54480'>").append(financeaNoCheckPastTP.getProNum()).append("</a> </td>");
+        htmlContent.append("<td> <a href='http://10.10.250.213:8080/fr/decision/view/report?viewlet=%25E8%25A8%2582%25E5%2596%25AE%25E5%25B7%25B2%25E9%2581%258E%25E5%25AE%25A2%25E4%25BA%25BA%25E4%25BA%25A4%25E6%259C%259F%25E6%259C%25AA%25E9%25A9%2597%25E8%25B2%25A8%25E6%2598%258E%25E7%25B4%25B0%2528TP%2529.cpt&ref_t=design&op=write&ref_c=024d58aa-f9b8-49b5-bc04-cffc341ea78b'>").append(financeaNoCheckPastTP.getProNum()).append("</a> </td>");
         htmlContent.append("</tr>");
 
         htmlContent.append("</table>");
