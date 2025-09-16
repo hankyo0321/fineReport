@@ -13,7 +13,6 @@ import java.util.List;
 public interface financeaRepository extends JpaRepository<Financea, Long> {
 
     @Query("""
-<<<<<<< HEAD
             SELECT f FROM Financea f WHERE f.proId =101 AND f.proDate >= :startOfDay AND f.factory = 'VN'
             
             """)
@@ -114,7 +113,7 @@ public interface financeaRepository extends JpaRepository<Financea, Long> {
             
             """)
     Financea findByProIdNoCheckPastANDFactoryTP( @Param("startOfDay") LocalDateTime startOfDay);
-=======
+    @Query("""
             SELECT f FROM Financea f WHERE f.proId =101 AND f.proDate >= :startOfDay
             
             """)
@@ -125,5 +124,4 @@ public interface financeaRepository extends JpaRepository<Financea, Long> {
             
             """)
     List<Financea> findByProIdPast( @Param("startOfDay") LocalDateTime startOfDay);
->>>>>>> 99e694fc407b0476227542424fadddeaceccd3e7
 }
