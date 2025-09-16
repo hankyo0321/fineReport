@@ -3,9 +3,12 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+<<<<<<< HEAD
 out/artifacts/
 out/test/
 src/META-INF/
+=======
+>>>>>>> 99e694fc407b0476227542424fadddeaceccd3e7
 
 ### STS ###
 .apt_generated
