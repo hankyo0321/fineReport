@@ -1,23 +1,21 @@
 package com.hank.fineReport.report.service;
 
-import com.hank.fineReport.report.model.*;
+import com.hank.fineReport.report.model.Financea;
 import com.hank.fineReport.report.repository.*;
 import com.hank.fineReport.report.repository.mapper.FinanceaMapper;
 import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-import jakarta.mail.internet.MimeMessage;
-import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Service
-public class MailService {
+public class MailTestService {
 
     @Value("${sevenday.Unfulfilled.order.details}")
     private String sevenUnfulfilledUrl;
@@ -52,10 +50,8 @@ public class MailService {
     @Autowired
     private OutViewZong5Repository outViewZong5Repository;
 
-
-    @Value("${app.mail.to}")
-    private String[] mailTo;
-
+    @Autowired
+    private FormatMailService formatMailService;
 
 
 
@@ -127,11 +123,9 @@ public class MailService {
 
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+        
 
-
-        String [] mailary = mailTo;
-
-        helper.setTo(mailary);
+        helper.setTo("hank.lin@stella.com.hk");
 
         helper.setFrom("eip.mail@stella.com.hk");
 
@@ -212,8 +206,8 @@ public class MailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-        String [] mailary = mailTo;
-        helper.setTo(mailary);
+
+        helper.setTo("hank.lin@stella.com.hk");
 
         helper.setFrom("eip.mail@stella.com.hk");
 
@@ -295,9 +289,8 @@ public class MailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-        String [] mailary = mailTo;
 
-        helper.setTo(mailary);
+        helper.setTo("hank.lin@stella.com.hk");
 
         helper.setFrom("eip.mail@stella.com.hk");
 
@@ -365,8 +358,8 @@ public class MailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-        String [] mailary = mailTo;
-        helper.setTo(mailary);
+
+        helper.setTo("hank.lin@stella.com.hk");
 
         helper.setFrom("eip.mail@stella.com.hk");
 
@@ -433,10 +426,7 @@ public class MailService {
 
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
-
-        String [] mailary = mailTo;
-
-        helper.setTo(mailary);
+        helper.setTo("hank.lin@stella.com.hk");
         helper.setFrom("eip.mail@stella.com.hk");
 
         helper.setSubject("【預警-未驗貨】廣寧廠 【Cảnh báo-chưa kiểm hàng】xưởng Quảng Ninh ");
@@ -503,9 +493,8 @@ public class MailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-        String [] mailary = mailTo;
+        helper.setTo("hank.lin@stella.com.hk");
 
-        helper.setTo(mailary);
         helper.setFrom("eip.mail@stella.com.hk");
 
         helper.setSubject("【預警-未驗貨】太平廠 【Cảnh báo-chưa kiểm hàng】xưởng Thái Bình ");

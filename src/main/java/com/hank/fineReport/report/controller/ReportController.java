@@ -7,6 +7,7 @@ import jakarta.mail.MessagingException;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -124,6 +125,7 @@ public class ReportController {
      * @return
      */
     @GetMapping("/sendfilledTotalMailAL")
+    @Scheduled(cron = "0 0 7 ? * MON-FRI", zone = "Asia/Taipei")
     public BaseResult<Void> sendfilledTotalMailAL(){
         try{
             mailService.sendfilledTotalMailAL();
