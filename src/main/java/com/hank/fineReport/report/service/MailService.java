@@ -3,17 +3,20 @@ package com.hank.fineReport.report.service;
 import com.hank.fineReport.report.model.*;
 import com.hank.fineReport.report.repository.*;
 import com.hank.fineReport.report.repository.mapper.FinanceaMapper;
-import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-import jakarta.mail.internet.MimeMessage;
-import org.springframework.util.CollectionUtils;
 
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -62,16 +65,18 @@ public class MailService {
 
     /**
      * 未滿單預警數據總表 (安老)
-     * @throws MessagingException
+     * @throws Exception
      */
-    public void sendfilledTotalMailAL() throws MessagingException {
+    public void sendfilledTotalMailAL() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
 
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
         StringBuilder htmlContent = new StringBuilder();
 
         htmlContent.append("<h2>【預警-未滿單&成型未開補】安老廠 【Cảnh báo-chưa đủ đơn&Thành hình chưa khai bù】Xưởng An Lão</h2>");
@@ -146,15 +151,17 @@ public class MailService {
 
     /**
      * 未滿單預警數據總表 (廣寧)
-     * @throws MessagingException
+     * @throws Exception
      */
-    public void sendfilledTotalMailGN() throws MessagingException {
+    public void sendfilledTotalMailGN() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -231,13 +238,15 @@ public class MailService {
      * 未滿單預警數據總表 (太平)
      * @throws MessagingException
      */
-    public void sendfilledTotalMailTP() throws MessagingException {
+    public void sendfilledTotalMailTP() throws MessagingException, Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -316,13 +325,15 @@ public class MailService {
      * 未驗貨預警數據總表 (安老)
      * @throws MessagingException
      */
-    public void sendNoCheckTotalMailAL() throws MessagingException {
+    public void sendNoCheckTotalMailAL() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -385,13 +396,15 @@ public class MailService {
      * 未驗貨預警數據總表 (廣寧)
      * @throws MessagingException
      */
-    public void sendNoCheckTotalMailGN() throws MessagingException {
+    public void sendNoCheckTotalMailGN() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -454,15 +467,20 @@ public class MailService {
      * 未驗貨預警數據總表 (廣寧)
      * @throws MessagingException
      */
-    public void sendNoCheckTotalMailTP() throws MessagingException {
+    public void sendNoCheckTotalMailTP() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
+
+
 
         htmlContent.append("<h2>【預警-未驗貨】太平廠 【Cảnh báo-chưa kiểm hàng】xưởng Thái Bình</h2>");
         htmlContent.append("<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse;'>");

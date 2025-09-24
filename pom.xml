@@ -5,9 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.3</version>
+		<version>2.7.18</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<properties>
+		<java.version>1.8</java.version>
+		<lombok.version>1.18.32</lombok.version>
+		<mybatis.boot.version>2.3.1</mybatis.boot.version>
+	</properties>
 	<groupId>com.hank</groupId>
 	<artifactId>fineReport</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -26,9 +31,6 @@
 		<tag/>
 		<url/>
 	</scm>
-	<properties>
-		<java.version>17</java.version>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,7 +59,7 @@
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<!-- 版本需自行輸入，否則無效 -->
-			<version>3.0.3</version>
+			<version>${mybatis.boot.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
@@ -74,13 +76,15 @@
 		</dependency>
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
-			<artifactId>ojdbc11</artifactId>
+			<artifactId>ojdbc8</artifactId>
+			<version>21.5.0.0</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -99,6 +103,7 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>

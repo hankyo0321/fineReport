@@ -1,15 +1,18 @@
 package com.hank.fineReport.report.model;
 
 
-import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Generated;
-import org.hibernate.annotations.Comment;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+@Setter
+@Getter
 @Data
 @Entity
 @Table(name="BJ_FINANCEA")
@@ -19,7 +22,7 @@ public class Financea implements Serializable {
     @EmbeddedId
     private FinanceaId id;
 
-
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name="PRO_DATE" , insertable = false, updatable = false)
     private Date proDate;
 

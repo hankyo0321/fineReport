@@ -20,7 +20,7 @@ public class MailJobScheduler {
 
 
     //安老
-    @Scheduled(cron = "0 0 7 ? * MON-FRI", zone = "Asia/Taipei")
+    @Scheduled(cron = "0 0 8 ? * MON-FRI", zone = "Asia/Taipei")
     public void scheduleAL() {
         try {
             mailService.sendfilledTotalMailAL();
@@ -31,7 +31,7 @@ public class MailJobScheduler {
     }
 
     //廣寧
-    @Scheduled(cron = "0 0 7 ? * MON-FRI", zone = "Asia/Taipei")
+    @Scheduled(cron = "0 0 8 ? * MON-FRI", zone = "Asia/Taipei")
     public void scheduleGN() {
         try {
             mailService.sendfilledTotalMailGN();
@@ -42,7 +42,7 @@ public class MailJobScheduler {
     }
 
     //太平
-    @Scheduled(cron = "0 0 7 ? * MON-FRI", zone = "Asia/Taipei")
+    @Scheduled(cron = "0 0 8 ? * MON-FRI", zone = "Asia/Taipei")
     public void scheduleTP() {
         try {
             mailService.sendfilledTotalMailTP();

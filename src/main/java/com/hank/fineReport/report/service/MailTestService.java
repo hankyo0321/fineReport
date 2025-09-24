@@ -3,16 +3,20 @@ package com.hank.fineReport.report.service;
 import com.hank.fineReport.report.model.Financea;
 import com.hank.fineReport.report.repository.*;
 import com.hank.fineReport.report.repository.mapper.FinanceaMapper;
-import jakarta.mail.MessagingException;
-import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.logging.SimpleFormatter;
 
 @Service
 public class MailTestService {
@@ -58,15 +62,17 @@ public class MailTestService {
 
     /**
      * 未滿單預警數據總表 (安老)
-     * @throws MessagingException
+     * @throws Exception
      */
-    public void sendfilledTotalMailAL() throws MessagingException {
+    public void sendfilledTotalMailAL() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -140,15 +146,17 @@ public class MailTestService {
 
     /**
      * 未滿單預警數據總表 (廣寧)
-     * @throws MessagingException
+     * @throws Exception
      */
-    public void sendfilledTotalMailGN() throws MessagingException {
+    public void sendfilledTotalMailGN() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -223,15 +231,17 @@ public class MailTestService {
 
     /**
      * 未滿單預警數據總表 (太平)
-     * @throws MessagingException
+     * @throws Exception
      */
-    public void sendfilledTotalMailTP() throws MessagingException {
+    public void sendfilledTotalMailTP() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -309,13 +319,16 @@ public class MailTestService {
      * 未驗貨預警數據總表 (安老)
      * @throws MessagingException
      */
-    public void sendNoCheckTotalMailAL() throws MessagingException {
+    public void sendNoCheckTotalMailAL() throws MessagingException, Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -378,13 +391,15 @@ public class MailTestService {
      * 未驗貨預警數據總表 (廣寧)
      * @throws MessagingException
      */
-    public void sendNoCheckTotalMailGN() throws MessagingException {
+    public void sendNoCheckTotalMailGN() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfDay = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -442,15 +457,17 @@ public class MailTestService {
 
     /**
      * 未驗貨預警數據總表 (廣寧)
-     * @throws MessagingException
+     * @throws Exception
      */
-    public void sendNoCheckTotalMailTP() throws MessagingException {
+    public void sendNoCheckTotalMailTP() throws Exception {
 
         /**
          * 未滿單預警數據總表
          */
-        LocalDate today = LocalDate.now();
-        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
+        Date date = new Date();
+        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
+        String strDate = sm.format(date);
+        Date startOfToday = sm.parse(strDate);
 
         StringBuilder htmlContent = new StringBuilder();
 
@@ -462,7 +479,7 @@ public class MailTestService {
 
 
         //訂單距離客人交期7 天未驗貨
-        Financea financeaNoCheckTP = finceRepository.findByProIdNoCheckSevenDaysANDFactoryTP(startOfDay);
+        Financea financeaNoCheckTP = finceRepository.findByProIdNoCheckSevenDaysANDFactoryTP(startOfToday);
         htmlContent.append("<tr>");
         htmlContent.append("<td>").append("訂單距離客人交期7天未驗貨\n" +  "<br>"+
                 "Đơn hàng cách ngày xuất hàng của khách hàng 7 ngày chưa kiểm hàng").append("</td>");
@@ -477,7 +494,7 @@ public class MailTestService {
 
         //訂單已過客人交期未驗貨
         //zong2
-        Financea financeaNoCheckPastTP = finceRepository.findByProIdNoCheckPastANDFactoryTP(startOfDay);
+        Financea financeaNoCheckPastTP = finceRepository.findByProIdNoCheckPastANDFactoryTP(startOfToday);
         htmlContent.append("<tr>");
         htmlContent.append("<td>").append("訂單已過客人交期未驗貨\n" +  "<br>"+
                 "Đơn hàng chưa kiểm hàng khi quá ngày xuất hàng của khách hàng").append("</td>");

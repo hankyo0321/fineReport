@@ -11,8 +11,6 @@ import java.util.List;
 @Repository
 public interface OutViewZong3Repository extends JpaRepository<OutViewZong3 , Long> {
 
-    @Query(value = """
-            select * From nxuser.VGB_OUTVIEWZONG3
-            """,nativeQuery = true)
+    @Query(value = "select * From nxuser.VGB_OUTVIEWZONG3",nativeQuery = true)
     public List<OutViewZong3> getov3();
 }

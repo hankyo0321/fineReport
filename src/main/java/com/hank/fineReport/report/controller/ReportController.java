@@ -3,12 +3,10 @@ package com.hank.fineReport.report.controller;
 
 import com.hank.fineReport.report.common.BaseResult;
 import com.hank.fineReport.report.service.MailService;
-import jakarta.mail.MessagingException;
-import org.apache.coyote.Response;
+import com.hank.fineReport.report.service.MailTestService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +16,9 @@ public class ReportController {
 
     @Autowired
     private MailService mailService;
+
+    @Autowired
+    private MailTestService testService;
 
 
     /**
@@ -29,7 +30,7 @@ public class ReportController {
         try{
             mailService.sendfilledTotalMailAL();
             return BaseResult.success(null,"發信成功");
-        }catch(MessagingException e){
+        }catch(Exception e){
             return BaseResult.failure(HttpStatus.INTERNAL_SERVER_ERROR,"發信失敗",e.getMessage());
 
         }
@@ -45,7 +46,7 @@ public class ReportController {
         try{
             mailService.sendfilledTotalMailGN();
             return BaseResult.success(null,"發信成功");
-        }catch(MessagingException e){
+        }catch(Exception e){
             return BaseResult.failure(HttpStatus.INTERNAL_SERVER_ERROR,"發信失敗",e.getMessage());
 
         }
@@ -61,7 +62,7 @@ public class ReportController {
         try{
             mailService.sendfilledTotalMailTP();
             return BaseResult.success(null,"發信成功");
-        }catch(MessagingException e){
+        }catch(Exception e){
             return BaseResult.failure(HttpStatus.INTERNAL_SERVER_ERROR,"發信失敗",e.getMessage());
 
         }
@@ -79,7 +80,7 @@ public class ReportController {
         try{
             mailService.sendNoCheckTotalMailAL();
             return BaseResult.success(null,"發信成功");
-        }catch(MessagingException e){
+        }catch(Exception e){
             return BaseResult.failure(HttpStatus.INTERNAL_SERVER_ERROR,"發信失敗",e.getMessage());
 
         }
@@ -96,7 +97,7 @@ public class ReportController {
         try{
             mailService.sendNoCheckTotalMailGN();
             return BaseResult.success(null,"發信成功");
-        }catch(MessagingException e){
+        }catch(Exception e){
             return BaseResult.failure(HttpStatus.INTERNAL_SERVER_ERROR,"發信失敗",e.getMessage());
 
         }
@@ -113,7 +114,33 @@ public class ReportController {
         try{
             mailService.sendNoCheckTotalMailTP();
             return BaseResult.success(null,"發信成功");
-        }catch(MessagingException e){
+        }catch(Exception e){
+            return BaseResult.failure(HttpStatus.INTERNAL_SERVER_ERROR,"發信失敗",e.getMessage());
+
+        }
+    }
+
+
+
+
+    /**
+     * 【預警-未驗貨】太平廠
+     * @return
+     */
+    @GetMapping("/testApi")
+    public BaseResult<Void> testApi(){
+        try{
+            testService.sendfilledTotalMailTP();
+            testService.sendfilledTotalMailAL();
+            testService.sendfilledTotalMailGN();
+
+            testService.sendNoCheckTotalMailTP();
+            testService.sendNoCheckTotalMailAL();
+            testService.sendNoCheckTotalMailGN();
+
+
+            return BaseResult.success(null,"發信成功");
+        }catch(Exception e){
             return BaseResult.failure(HttpStatus.INTERNAL_SERVER_ERROR,"發信失敗",e.getMessage());
 
         }

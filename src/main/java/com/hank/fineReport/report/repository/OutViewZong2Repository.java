@@ -12,9 +12,7 @@ import java.util.List;
 @Repository
 public interface OutViewZong2Repository extends JpaRepository<OutViewZong2, Long> {
 
-    @Query(value = """
-            select * From nxuser.VGB_OUTVIEWZONG2
-            """, nativeQuery = true)
+    @Query(value = "select * From nxuser.VGB_OUTVIEWZONG2", nativeQuery = true)
     public List<OutViewZong2> getTotalOutViewZong2();
 
 

@@ -1,8 +1,10 @@
 package com.hank.fineReport.report.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -10,7 +12,7 @@ import java.util.Objects;
 @Embeddable
 public class FinanceaId implements Serializable {
 
-
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name="PRO_DATE")
     private Date proDate;
 
